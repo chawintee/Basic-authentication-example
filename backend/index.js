@@ -40,7 +40,7 @@ app.use('/student',studentRoute);
 
 
 
-db.sequelize.sync().then(()=>{
+db.sequelize.sync({force: false}).then(()=>{
 
     app.listen(8000,()=>{
         console.log("Server running in port 8000")
